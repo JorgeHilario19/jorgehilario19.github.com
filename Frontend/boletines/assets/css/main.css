@@ -1,0 +1,158 @@
+/*
+crema #C4D6B0
+azul #477998
+negro #2B2836
+naranja #F64740
+rojo #A3333D
+*/
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+a{
+  color: #A3333D;
+  text-decoration: none;
+}
+img{
+  max-width: 100%;/*El ancho maximo que ocupa la imagen en la pantalla*/
+}
+a:hover{
+  opacity: 0.5;/*Se opaca cuando paso el mouse sobre el elemento del 0 al 1*/
+}
+a:focus{
+  background-color: red;
+}
+
+.title{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+  background: #2B2836;
+  background: -webkit-linear-gradient(to right, #859398, #2B2836);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #859398, #2B2836); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;/*Para abarcar el ancho total de la pantalla del div*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  max-width: 960px;
+  width: 100%;
+  height: 80vh;
+  background-color: white;
+  /*box-shadow: diferenciaHorizonta diferenciaVertical desenfoque amplitud color*/
+  box-shadow: 0 3px 10px 15px rgba(0,0,0,0,16), 0 10px 15px rgba(0,0,0,0,23);
+  border-radius: 4px;/*Redondear las esquinas*/
+  position: relative;
+  padding: 0.5em;
+  overflow: scroll;
+}
+.content{
+  padding: 1em;
+}
+td{
+  display: block;/*Transformamos las columnas en filas con display:block*/
+  width: 100%;/*Los td ocupan todo el ancho de la fila*/
+}
+/*Pseudoclase*/
+td:nth-last-of-type(1){/*Selecciona el primero del tipo td*/
+  font-size: 2em;
+  font-weight: bold;/*Teccto en negritas*/
+  color: #642B73
+}
+th{
+  display: none;/*Ocultará los encabezados de la tabla*/
+}
+
+.main-image{
+  float: left;/*Hace que el texto fluya hacía la derecha*/
+  margin-right: 1em;/*Para que no aparezca tan pegado el texto de la imagen*/
+  height: 295px;/*Altura de la imagen*/
+}
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.close{
+  height: 20px;
+  width: 20px;
+  color: white;
+  border-radius: 60px;
+  background-color: #A3333D;
+  display:inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0, 16), 0 3px 6px rgba(0,0,0,0,23);
+  font-weight: 300;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.paragraph{
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.fa-star{
+  color: yellow;
+}
+.fa-star-half-o{
+  color:yellow;
+}
+
+.table{
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+.table tr:nth-child(even){
+  background-color: #C4D6B0
+}
+.table tr:nth-child(odd){
+  background-color: #477998
+}
+.title-item{
+  /*
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: gray;*/
+  font-size: 1.3em;
+  border-bottom: solid 2px gray;
+  padding-bottom: 1em;
+}
+.position{
+  background-color: gray;/*Color de fondo*/
+  color: white;/*Color de la letra*/
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 0.5em;
+}
+@media (min-width:900px){
+  th{
+    display: table-cell;/*Nos muestra los encabezados*/
+  }
+  td{
+    width: auto;
+    display: table-cell;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+}
+
+@media (min-height:550px) {
+  .content{
+    height: 500px;
+  }
+
+}
